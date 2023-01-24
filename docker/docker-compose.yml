@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+  frontend:
+    container_name: myreactappc
+    image: myreactappi
+    build:
+      context: ..
+      dockerfile: "./docker/frontend.Dockerfile"
+    ports:
+      - 8080:80
+  backend:
+    container_name: myfastapiappc
+    image: myfastapiappi
+    build:
+      context: ..
+      dockerfile: "./docker/backend.Dockerfile"
+    ports:
+      - 8081:81
