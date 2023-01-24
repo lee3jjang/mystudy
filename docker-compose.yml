@@ -1,0 +1,18 @@
+version: "3.8"
+
+services:
+  app:
+    container_name: myreactappc
+    image: myreactappi
+    build:
+      context: .
+    ports:
+      - 8080:80
+
+  app2:
+    container_name: myreactappcc
+    image: myreactappi
+    build:
+      context: .
+    ports:
+      - 8081:80
